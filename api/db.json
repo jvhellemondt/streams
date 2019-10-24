@@ -1,3 +1,15 @@
 {
-  "streams": []
+  "streams": [
+    {
+      "title": "I made another stream! Updated with Patch",
+      "description": "Whooooooo!",
+      "userId": "108902897402571563878",
+      "id": 4
+    },
+    {
+      "title": "Refactored stream create! Updated to me!",
+      "description": "Does it work?",
+      "id": 5
+    }
+  ]
 }
