@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router as MyRouter, Route } from 'react-router-dom';
+import { Router as MyRouter, Route, Switch } from 'react-router-dom';
 
 import StreamShow from './streams/StreamShow';
 import StreamList from './streams/StreamList';
@@ -16,11 +16,13 @@ const App = () => {
       <MyRouter history={history}>
         <div>
           <Header />
-          <Route path="/streams/show/:id" component={StreamShow} />
+          <Switch>
           <Route path="/streams/new" component={StreamCreate} />
           <Route path="/streams/edit/:id" component={StreamEdit} />
           <Route path="/streams/delete/:id" component={StreamDelete} />
-          <Route path="/" exact component={StreamList} />
+          <Route path="/streams/:id" exact component={StreamShow} />
+          <Route path="/" component={StreamList} />
+          </Switch>
         </div>
       </MyRouter>
     </div>
